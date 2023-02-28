@@ -1,0 +1,96 @@
+.container {
+  display         : flex;
+  flex-direction  : column;
+  justify-content :center;
+  height: 100%;
+  width: 15%;
+  background-color: white;
+  padding-bottom: 15rem;
+}
+
+.container h1 {
+  margin: 0 auto 9rem;
+  color: black;
+  font-weight: 900;
+}
+
+.container ul {
+  display       : inherit;
+  flex-direction: inherit;
+  padding-inline-start: 0;
+}
+
+.container li {
+  position: relative;
+  margin: 0 auto 1.2rem;
+  cursor: pointer;
+  opacity    : 0.5;
+  transition : opacity 1s ease-in-out;
+  color: var(--not-selected-text);
+  height: 4rem;
+}
+
+.container li button {
+  font-weight: 600;
+  font-size: medium;
+  border     : none;
+  background : none;
+}
+
+.container li:hover {
+  opacity: 1;
+}
+
+.container svg {
+  color: inherit;
+  opacity: inherit;
+
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    height: 5rem;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 0;
+  }
+
+  .container h1 {
+    margin: auto;
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 900;
+  }
+  
+  .container ul {
+    display       : inherit;
+    flex-direction: inherit;
+    padding-inline-start: 0;
+    margin: auto 1rem auto 0;
+    height: 4rem;
+  }
+  
+  .container li {
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    opacity    : 0.5;
+    transition : opacity 1s ease-in-out;
+    color: var(--not-selected-text);
+    height: 2rem;
+  }
+  
+  .container li button {
+    font-weight: 600;
+    font-size: 0.9rem;
+    border     : none;
+    background : none;
+  }
+}

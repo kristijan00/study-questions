@@ -1,0 +1,368 @@
+.wrapper {
+  width         : 100vw;
+  height        : 100vh;
+  display       : flex;
+  flex-direction: row;
+  overflow      : hidden;
+}
+
+.container {
+  width           : 65%;
+  height          : 100%;
+  background-color: var(--color-background);
+}
+
+.noTopics {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.noQuestions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.topBox {
+  width           : 90%;
+  height          : 11rem;
+  border-radius   : 1rem;
+  margin          : 3rem auto 0;
+  background-color: var(--color-lower);
+  animation       : fadeIn 1s both;
+}
+
+.topBox h1 {
+  text-align : center;
+  font-weight: 700;
+  padding-top: 2rem;
+  color      : var(--color-new2);
+}
+
+.topicContainer {
+  width                : 90%;
+  margin               : 5rem auto 0;
+  display              : grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  overflow-y           : scroll;
+  overflow-x           : hidden;
+  max-height           : 60%;
+  padding              : 1rem 0rem;
+}
+
+.containerAlt {
+  width : 90%;
+  margin: 5rem auto 0;
+}
+
+.topicItem {
+  display         : flex;
+  flex-direction  : column;
+  height          : 14rem;
+  width           : 12rem;
+  border-radius   : 0.5rem;
+  margin          : 1rem;
+  background-color: white;
+  animation       : fadeIn 0.5s both calc(var(--count) * 350ms);
+}
+
+.topicItem h3 {
+  text-align: center;
+  margin    : 1rem 0;
+}
+
+.topicItem p {
+  text-align: center;
+  font-size : small;
+}
+
+.topicItem button {
+  height: 2rem;
+  width : 5rem;
+  margin: 5rem auto 0;
+  background-color: var(--color-new2);
+  color: white;
+}
+
+/* Practice card */
+.practiceCard {
+  padding         : 2rem;
+  width           : 50%;
+  min-height      : 35rem;
+  background-color: white;
+  margin          : 0 auto;
+  border-radius   : 1rem;
+}
+
+.practiceCard h1 {
+  text-align: center;
+}
+
+.practiceCard p {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size : 1.2rem;
+}
+
+.practiceCard p:last-of-type {
+  margin       : 3rem auto 0;
+  height       : 15rem;
+  max-width    : 90%;
+  text-overflow: clip;
+  overflow-wrap: break-word;
+}
+
+.practiceCard button {
+  width: 4rem;
+  background-color: var(--color-new2);
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+.practiceCard button:hover {
+  opacity: 1;
+}
+
+.practiceCard .innerCard {
+  width           : 90%;
+  height          : 24rem;
+  margin          : 2rem auto 0;
+  background-color: #E0DFD5;
+  border-radius   : 0.5rem;
+  display         : flex;
+  flex-direction  : column;
+}
+
+.practiceCard .innerCard button {
+  height : 2rem;
+  display: inline-block;
+  width  : 7.5rem;
+  margin : 0 auto;
+  background-color: var(--color-new2);
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.practiceCard .innerCard button:hover {
+  opacity: 1;
+}
+
+.practiceCard .innerCard .buttonContainer {
+  margin        : 0 auto;
+  width         : 100%;
+  display       : flex;
+  flex-direction: row;
+}
+
+/*  */
+
+@keyframes fadeIn {
+  0% {
+    opacity  : 0;
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    opacity  : 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1840px) {
+  .containerAlt {
+    margin: 3rem auto 0;
+  }
+
+  .topBox {
+    margin: 1.5rem auto 0;
+  }
+
+  .practiceCard {
+    padding   : 1rem;
+    min-height: 25rem;
+    height    : 32rem !important;
+  }
+
+  .practiceCard .innerCard {
+    height: 22rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .practiceCard p:last-of-type {
+    margin       : 1.5rem auto 0;
+    height       : 15rem;
+    max-width    : 90%;
+    text-overflow: clip;
+    overflow-wrap: break-word;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    width           : 100vw;
+    height          : auto;
+    display         : flex;
+    flex-direction  : column;
+    overflow        : scroll;
+    background-color: var(--color-background);
+  }
+  
+  .container {
+    width : 100%;
+    height: 100%;
+  }
+  
+  .noTopics {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .noQuestions {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .topBox {
+    width           : 90%;
+    height          : 6rem;
+    border-radius   : 1rem;
+    margin          : 2rem auto 0;
+    background-color: var(--color-lower);
+    animation       : fadeIn 1s both;
+  }
+  
+  .topBox h1 {
+    text-align : center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    color      : var(--color-new2);
+  }
+  
+  .topicContainer {
+    min-width: 90%;
+    max-width                : 90%;
+    margin               : 2rem auto 0;
+    display              : flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x           : scroll;
+    height: 22rem;
+    padding              : 1rem 0rem;
+  }
+  
+  .containerAlt {
+    width : 90%;
+    margin: 2rem auto 0;
+  }
+  
+  .topicItem {
+    display         : flex;
+    flex-direction  : column;
+    min-height          : 14rem;
+    min-width           : 10rem;
+    border-radius   : 0.5rem;
+    opacity: 0.7;
+    margin          : 1rem;
+    background-color: white;
+    transition: opacity 0.5s;
+    animation       : fadeIn 0.5s both calc(var(--count) * 350ms);
+  }
+
+  .topicItem:focus {
+    opacity: 1;
+  }
+  
+  .topicItem h3 {
+    text-align: center;
+    margin    : 1rem 0;
+  }
+  
+  .topicItem p {
+    text-align: center;
+    font-size : small;
+  }
+  
+  .topicItem button {
+    height: 2rem;
+    width : 5rem;
+    margin: 5rem auto 0;
+    background-color: var(--color-new2);
+    color: white;
+  }
+  
+  /* Practice card */
+  .practiceCard {
+    padding         : 2rem 1rem;
+    width           : 100%;
+    min-height      : 35rem;
+    background-color: white;
+    margin          : 0 auto;
+    border-radius   : 1rem;
+  }
+  
+  .practiceCard h1 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  
+  .practiceCard p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size : 1rem;
+  }
+  
+  .practiceCard p:last-of-type {
+    margin       : 2rem auto 0;
+    height       : 16rem;
+    max-width    : 90%;
+    text-overflow: clip;
+    overflow-wrap: break-word;
+  }
+  
+  .practiceCard button {
+    width: 4rem;
+    background-color: var(--color-new2);
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .practiceCard button:hover {
+    opacity: 1;
+  }
+  
+  .practiceCard .innerCard {
+    width           : 90%;
+    height          : 24rem;
+    margin          : 2rem auto 0;
+    background-color: #E0DFD5;
+    border-radius   : 0.5rem;
+    display         : flex;
+    flex-direction  : column;
+  }
+  
+  .practiceCard .innerCard button {
+    height : 2rem;
+    display: inline-block;
+    width  : 7.5rem;
+    margin : 0 auto;
+    background-color: var(--color-new2);
+    font-size: 0.8rem;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .practiceCard .innerCard button:hover {
+    opacity: 1;
+  }
+  
+  .practiceCard .innerCard .buttonContainer {
+    margin        : 0 auto;
+    width         : 100%;
+    display       : flex;
+    flex-direction: row;
+  }
+}

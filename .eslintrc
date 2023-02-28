@@ -1,0 +1,16 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "semi": ["error", "always"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true, "avoidEscape": true }],
+    "brace-style": "error",
+    "indent": ["error", 2],
+    "keyword-spacing": "error",
+    "func-call-spacing": ["error", "never"],
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "warn",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

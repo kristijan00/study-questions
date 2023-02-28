@@ -1,0 +1,315 @@
+.wrapper {
+  width         : 100vw;
+  height        : 100vh;
+  display       : flex;
+  flex-direction: row;
+  overflow      : hidden;
+}
+
+.container {
+  width           : 65%;
+  height          : 100%;
+  background-color: var(--color-background);
+}
+
+.container h2 {
+  padding-top: 2rem;
+  text-align : center;
+  color      : var(--color-new2);
+}
+
+.container .createQuestion {
+  position        : absolute;
+  left            : 35%;
+  z-index         : 9999;
+  width           : 25%;
+  max-height      : 30rem;
+  background-color: var(--color-lower);
+  border-radius   : 0.5rem;
+  margin          : 3rem auto 0;
+  padding         : 1rem;
+  display         : flex;
+  flex-direction  : column;
+}
+
+.createQuestion .expand {
+  display       : flex;
+  flex-direction: column;
+  padding       : 1rem 7rem;
+  max-height    : 17rem;
+  opacity       : 1;
+  overflow      : hidden;
+  transition    : all 1s ease-in-out;
+  border-radius : inherit;
+}
+
+.expand input,
+button {
+  margin-bottom: 1rem;
+  border       : 0;
+  border-radius: 0.5rem;
+  height       : 2rem;
+}
+
+.expand button {
+  background-color: var(--color-new);
+  color           : white;
+  opacity         : 0.7;
+  transition      : opacity 0.5s;
+}
+
+.expand button:hover {
+  opacity: 1;
+}
+
+.minimized {
+  max-height: 0 !important;
+  opacity   : 0 !important;
+}
+
+.expandButton {
+  height          : 2rem;
+  width           : 7rem;
+  background-color: var(--color-new);
+  color           : white;
+  margin          : 1rem auto;
+  opacity         : 0.7;
+  transition      : opacity 0.5s;
+}
+
+.expandButton:hover {
+  opacity: 1;
+}
+
+.questionContainer {
+  width           : 90%;
+  min-height      : 70%;
+  max-height      : 70%;
+  padding         : 3rem 2rem;
+  border-radius   : 1rem;
+  overflow-y      : scroll;
+  margin          : 20% auto 0;
+  background-color: white;
+}
+
+.question {
+  height        : 8rem;
+  width         : 100%;
+  padding       : 0 1rem;
+  border        : 0.1rem solid var(--color-new);
+  margin-bottom : 1rem;
+  border-radius : 0.5rem;
+  display       : flex;
+  flex-direction: column;
+  transition    : all 0.2s;
+}
+
+.question:hover {
+  border: 0.3rem solid var(--color-new);
+}
+
+.question .content {
+  margin-top : 0.5rem;
+  overflow   : hidden;
+  max-width  : 20rem;
+  white-space: nowrap;
+}
+
+.question h2 {
+  padding-top: 1rem;
+}
+
+.question p {
+  width        : 10rem;
+  float        : left;
+  padding-left : 2rem;
+  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+}
+
+.question img {
+  width: 1.7rem;
+}
+
+.contentContainer {
+  display              : grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contentContainer img {
+  margin-left: auto;
+  padding-top: 0.3rem;
+  cursor     : pointer;
+  opacity    : 0.6;
+  transition : 0.5s opacity;
+}
+
+.contentContainer img:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1840px) {
+  .container .createQuestion {
+    margin: 1rem auto 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    width           : 100vw;
+    height          : auto;
+    display         : flex;
+    flex-direction  : column;
+    overflow        : scroll;
+    background-color: var(--color-background);
+  }
+
+  .container {
+    width : 100%;
+    height: 100%;
+  }
+
+  .container h2 {
+    padding-top: 2rem;
+    font-size: 1.4rem;
+    text-align : center;
+    color      : var(--color-new2);
+  }
+
+  .container .createQuestion {
+    position        : absolute;
+    left            : 5%;
+    z-index         : 9999;
+    width           : 87%;
+    max-height      : 33rem;
+    background-color: var(--color-lower);
+    border-radius   : 0.5rem;
+    margin          : 2rem auto;
+    padding         : 1rem;
+    display         : flex;
+    flex-direction  : column;
+  }
+
+  .createQuestion .expand {
+    display       : flex;
+    flex-direction: column;
+    padding       : 1rem 4rem;
+    max-height    : 23rem;
+    opacity       : 1;
+    overflow      : hidden;
+    transition    : all 1s ease-in-out;
+    border-radius : inherit;
+  }
+
+  .expand input,
+  button {
+    margin-bottom: 1rem;
+    border       : 0;
+    border-radius: 0.5rem;
+    height       : 1.7rem;
+  }
+
+  .expand button {
+    background-color: var(--color-new);
+    color           : white;
+    opacity         : 1;
+    transition      : opacity 0.5s;
+  }
+
+  .expand button:hover {
+    opacity: 1;
+  }
+
+  .minimized {
+    max-height: 0 !important;
+    opacity   : 0 !important;
+  }
+
+  .expandButton {
+    height          : 1.8rem;
+    width           : 7rem;
+    background-color: var(--color-new);
+    color           : white;
+    margin          : 1rem auto;
+    opacity         : 1;
+    transition      : opacity 0.5s;
+  }
+
+  .expandButton:hover {
+    opacity: 1;
+  }
+
+  .questionContainer {
+    width           : 90%;
+    min-height      : 29rem;
+    max-height      : 29rem;
+    padding         : 3rem 2rem;
+    border-radius   : 1rem;
+    overflow-y      : scroll;
+    margin          : 15rem auto 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question {
+    height        : 8rem;
+    width         : 100%;
+    padding       : 0 1rem;
+    border        : 0.1rem solid var(--color-new);
+    margin: 0 auto 1rem;
+    border-radius : 0.5rem;
+    display       : flex;
+    flex-direction: column;
+    transition    : all 0.2s;
+  }
+
+  .question:focus {
+    border: 0.3rem solid var(--color-new);
+  }
+
+  .question .content {
+    margin-top : 0.5rem;
+    overflow   : hidden;
+    max-width  : 21rem;
+    white-space: nowrap;
+  }
+
+  .question h2 {
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .question p {
+    width        : 20rem;
+    float        : left;
+    padding-left : 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+  }
+
+  .question img {
+    width: 1.4rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .contentContainer {
+    display              : grid;
+    grid-template-columns: 1.6fr 0.4fr;
+  }
+
+  .contentContainer img {
+    margin-left: auto;
+    padding-top: 0.3rem;
+    cursor     : pointer;
+    opacity    : 0.6;
+    transition : 0.5s opacity;
+  }
+
+  .contentContainer img:hover {
+    opacity: 1;
+  }
+
+}

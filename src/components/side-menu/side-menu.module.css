@@ -1,0 +1,106 @@
+.container {
+  height: 100%;
+  width: 20%;
+  background-color: white;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: medium;
+  padding: 3rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in;
+}
+
+.container p:hover {
+  opacity: 1;
+}
+
+.container .logoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.logoContainer img {
+  width: 8rem;
+  margin: 1rem auto;
+}
+
+.logoContainer h2 {
+  margin: 1rem 0;
+  font-weight: 900;
+}
+
+.logoContainer h3 {
+  font-size: medium;
+}
+
+.reminder {
+  width: 100%;
+}
+
+.container .reminder h3 {
+  font-size: large;
+  padding: 3rem 1.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    margin: 1rem auto;
+    height: 100%;
+    width: 90%;
+    background-color: white;
+    border-radius: 1rem;
+  }
+
+  .container p {
+    font-weight: 600;
+    font-size: medium;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  .container p:hover {
+    opacity: 1;
+  }
+  
+  .container .logoContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .logoContainer img {
+    width: 8rem;
+    margin: 1rem auto;
+  }
+  
+  .logoContainer h2 {
+    margin: 1rem 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  
+  .logoContainer h3 {
+    font-size: 1rem;
+  }
+  
+  .reminder {
+    width: 100%;
+  }
+  
+  .container .reminder h3 {
+    font-size: 1rem;
+    padding: 3rem 1.5rem;
+    font-weight: 700;
+  }
+}

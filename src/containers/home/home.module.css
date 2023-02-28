@@ -1,0 +1,229 @@
+.wrapper {
+  width         : 100vw;
+  height        : 100vh;
+  display       : flex;
+  flex-direction: row;
+  overflow      : hidden;
+}
+
+.container {
+  width           : 65%;
+  height          : 100%;
+  background-color: var(--color-background);
+}
+
+.welcomeBack {
+  width           : 90%;
+  height          : 11rem;
+  border-radius   : 1rem;
+  margin          : 3rem auto 0;
+  background-color: var(--color-lower);
+  animation       : fadeIn 1s both;
+}
+
+.welcomeBack h1 {
+  text-align : center;
+  font-weight: 700;
+  padding-top: 2rem;
+  color      : var(--color-new2);
+}
+
+.lowerContainer {
+  display        : flex;
+  flex-direction : row;
+  width          : 90%;
+  margin         : 3rem auto 0;
+  justify-content: space-between;
+  height         : 70%;
+}
+
+.lowerContainer .currentTopics,
+.lowerContainer .timeSpent {
+  height          : 70%;
+  border-radius   : 1rem;
+  width           : 48%;
+  background-color: white;
+  animation       : fadeIn 1s both 0.3s ease;
+}
+
+.lowerContainer .timeSpent {
+  animation-delay: 0.5s;
+}
+
+/* Current topics */
+
+.lowerContainer .currentTopics,
+.lowerContainer .timeSpent {
+  display       : flex;
+  flex-direction: column;
+  padding       : 2rem;
+  overflow-y    : scroll;
+  overflow-x    : hidden;
+}
+
+.currentTopics .titleContainer,
+.timeSpent .titleContainer {
+  width: 100%;
+}
+
+.currentTopics span,
+.currentTopics h3 {
+  display: inline-block;
+  color  : var(--color-new);
+}
+
+.lowerContainer .timeSpent h3 {
+  color: var(--color-new);
+}
+
+.currentTopics .titleContainer h3 {
+  margin-bottom: 1.5rem;
+  font-weight  : 800;
+}
+
+.currentTopics .titleContainer span {
+  margin-left: 17.5rem;
+  font-weight: 600;
+  cursor     : pointer;
+}
+
+.currentTopics .topicItem {
+  margin : 1.5rem 0;
+  width  : 100%;
+  display: flex;
+}
+
+.topicItem p:last-child {
+  margin-left: auto;
+}
+
+/*  */
+
+/* Time spent */
+.lowerContainer .timeSpent {
+  margin-left: auto;
+}
+
+/*  */
+
+@keyframes fadeIn {
+  0% {
+    opacity  : 0;
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    opacity  : 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    width           : 100vw;
+    height          : auto;
+    display         : flex;
+    flex-direction  : column;
+    overflow        : scroll;
+    background-color: var(--color-background);
+  }
+
+  .container {
+    width : 100%;
+    height: 100%;
+  }
+
+  .welcomeBack {
+    width           : 90%;
+    height          : 6rem;
+    border-radius   : 1rem;
+    margin          : 3rem auto 0;
+    background-color: var(--color-lower);
+    animation       : fadeIn 1s both;
+  }
+
+  .welcomeBack h1 {
+    font-size  : 1.4rem;
+    text-align : center;
+    font-weight: 700;
+    padding-top: 2rem;
+    color      : var(--color-new2);
+  }
+
+  .lowerContainer {
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    margin        : 2rem auto 0;
+    height        : auto;
+  }
+
+  .lowerContainer .currentTopics,
+  .lowerContainer .timeSpent {
+    height          : 22rem;
+    border-radius   : 1rem;
+    width           : 90%;
+    margin          : 1rem auto;
+    background-color: white;
+    animation       : fadeIn 1s both 0.3s ease;
+  }
+
+  .lowerContainer .timeSpent {
+    animation-delay: 0.5s;
+  }
+
+  .lowerContainer .currentTopics,
+  .lowerContainer .timeSpent {
+    display       : flex;
+    flex-direction: column;
+    padding       : 1.5rem;
+    overflow-y    : scroll;
+    overflow-x    : hidden;
+  }
+
+  .currentTopics .titleContainer,
+  .timeSpent .titleContainer {
+    width: 100%;
+  }
+
+  .currentTopics span,
+  .currentTopics h3 {
+    display: inline-block;
+    color  : var(--color-new);
+    font-size: 1.1rem;
+  }
+
+  .lowerContainer .timeSpent h3 {
+    color: var(--color-new);
+    font-size: 1.1rem;
+  }
+
+  .currentTopics .titleContainer h3 {
+    margin-bottom: 1.5rem;
+    font-weight  : 800;
+  }
+
+  .currentTopics .titleContainer span {
+    margin-left: 8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor     : pointer;
+  }
+
+  .currentTopics .topicItem {
+    margin : 1.5rem 0;
+    width  : 100%;
+    display: flex;
+  }
+
+  .topicItem p:last-child {
+    margin-left: auto;
+  }
+
+  /*  */
+
+  /* Time spent */
+  .lowerContainer .timeSpent {
+    margin-left: auto;
+  }
+}
