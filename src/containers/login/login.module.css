@@ -29,7 +29,7 @@
 .container button {
   border          : 0;
   border-radius   : 0.5rem;
-  height          : 2rem;
+  height          : 3rem;
   margin-top      : 1.5rem;
   cursor          : pointer;
   background-color: #d2bba0;
@@ -86,16 +86,16 @@
 
 @media only screen and (min-width: 1020px) and (max-width: 1840px) {
   .container {
-    padding         : 8rem 8rem;
-    border-radius   : 1rem;
+    padding      : 8rem 8rem;
+    border-radius: 1rem;
   }
-  
+
   .container h1 {
-    font-size    : 2.3rem;
+    font-size: 2.3rem;
   }
 
   .wrapper label {
-    font-size         : 15px;
+    font-size: 17px;
   }
 }
 
@@ -133,7 +133,7 @@
     font-size    : 18px;
     padding      : 8px 8px 8px 4px;
     display      : block;
-    margin: 0 auto;
+    margin       : 0 auto;
     width        : 92%;
     border       : none;
     border-bottom: 1px solid #757575;
@@ -141,7 +141,7 @@
 
   .wrapper label {
     color             : #999;
-    font-size         : 13px;
+    font-size         : 14px;
     font-weight       : normal;
     position          : absolute;
     pointer-events    : none;

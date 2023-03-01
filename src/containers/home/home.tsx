@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <NavBar />
       <div className={styles.container}>
         <div className={styles.welcomeBack}>
-          <h1>Welcome back {userStore.user?.first_name ? userStore.user.first_name : ''}</h1>
+          <h1>Welcome back {userStore.user?.first_name ? userStore.user.id === '943715a4-6cba-4ae0-be52-0d9bd3902333' ? userStore.user.first_name + ' aka the dumbass' : userStore.user.first_name : ''}</h1>
         </div>
         <div className={styles.lowerContainer}>
           <div className={styles.currentTopics}>

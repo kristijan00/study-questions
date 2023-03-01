@@ -12,7 +12,7 @@
   margin: 4rem auto 8rem;
   color: black;
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 
 .container ul {
@@ -33,7 +33,7 @@
 
 .container li button {
   font-weight: 600;
-  font-size: medium;
+  font-size: 1.1rem;
   border     : none;
   background : none;
 }
