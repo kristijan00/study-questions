@@ -14,12 +14,14 @@
 
 .noTopics {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  width: 100%;
 }
 
 .noQuestions {
   text-align: center;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .topBox {

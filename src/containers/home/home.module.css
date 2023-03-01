@@ -82,9 +82,15 @@
 }
 
 .currentTopics .titleContainer span {
-  margin-left: 17.5rem;
+  margin-left: 16rem;
   font-weight: 600;
   cursor     : pointer;
+  opacity: 0.6;
+  transition: opacity 0.5s;
+}
+
+.currentTopics .titleContainer span:hover {
+  opacity: 1;
 }
 
 .currentTopics .topicItem {
@@ -115,6 +121,12 @@
   100% {
     opacity  : 1;
     transform: translate(0, 0);
+  }
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1840px) {
+  .currentTopics .titleContainer span {
+    margin-left: 10rem;
   }
 }
 

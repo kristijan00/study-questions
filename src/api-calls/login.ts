@@ -1,12 +1,9 @@
 import { User } from '../models/user';
 import { Result } from '../models/result';
 
-const locao = 'localhost';
-const wifi = '192.168.1.24';
-
 const login = async (email: string, password: string): Promise<Result<User>> => {
   try {
-    const response = await fetch(`http://${locao}:3000/login`, {
+    const response = await fetch(`https://boiling-cliffs-71800.herokuapp.com/login`, {
       method: 'POST',
       cache: 'no-cache',
       headers: {

@@ -1,13 +1,9 @@
 import { Question } from '../models/topic';
 import { Result } from '../models/result';
 
-const local = 'localhost';
-const wifi = '192.168.1.24';
-
-
 const getQuestions = async (user_id: string, topic_id: string): Promise<Result<Question[]>> => {
   try {
-    const response = await fetch(`http://${local}:3000/get-questions`, {
+    const response = await fetch(`https://boiling-cliffs-71800.herokuapp.com/get-questions`, {
       method: 'POST',
       cache: 'no-cache',
       headers: {

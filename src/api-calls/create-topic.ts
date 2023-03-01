@@ -1,12 +1,8 @@
 import { Result } from '../models/result';
 
-const locao = 'localhost';
-const wifi = '192.168.1.24';
-
-
 const createTopic = async (topicName: string, user_id: string): Promise<Result> => {
   try {
-    const response = await fetch(`http://${locao}:3000/create-topic`, {
+    const response = await fetch(`https://boiling-cliffs-71800.herokuapp.com/create-topic`, {
       method: 'POST',
       cache: 'no-cache',
       headers: {

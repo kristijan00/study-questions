@@ -38,7 +38,7 @@ const Practice: React.FC = () => {
         <div className={state === 'view' ? styles.topicContainer : styles.containerAlt}>
           {
             state === 'view' ?
-              topicStore.topics ?
+              topicStore.topics.length > 0 ?
                 topicStore.topics.map((topic, idx) =>
                   <div key={topic.id} className={styles.topicItem} style={{ '--count': idx } as React.CSSProperties}>
                     <h3>{topic.name ? topic.name : 'No name'}</h3>
@@ -46,7 +46,7 @@ const Practice: React.FC = () => {
                     <button onClick={() => startPractice(topic)}>Start</button>
                   </div>)
                 :
-                <h2 className={styles.notTopics}>No topics to display.</h2>
+                <h2 className={styles.noTopics}>No topics to display.</h2>
               :
               <div className={styles.practiceCard}>
                 <button onClick={() => {
