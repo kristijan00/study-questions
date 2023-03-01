@@ -33,10 +33,11 @@
 .logoContainer h2 {
   margin: 1rem 0;
   font-weight: 900;
+  font-size: 1.3rem;
 }
 
 .logoContainer h3 {
-  font-size: medium;
+  font-size: 1rem;
 }
 
 .reminder {
@@ -44,7 +45,7 @@
 }
 
 .container .reminder h3 {
-  font-size: large;
+  font-size: 1.1rem;
   padding: 3rem 1.5rem;
   font-weight: 700;
 }

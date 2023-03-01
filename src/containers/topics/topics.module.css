@@ -41,6 +41,7 @@
 
 .createTopic h1 {
   color: var(--color-new2);
+  font-size: 1.6rem;
 }
 
 .createTopic input {

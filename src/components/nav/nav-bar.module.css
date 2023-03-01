@@ -9,9 +9,10 @@
 }
 
 .container h1 {
-  margin: 0 auto 9rem;
+  margin: 4rem auto 8rem;
   color: black;
   font-weight: 900;
+  font-size: 1.8rem;
 }
 
 .container ul {
@@ -64,7 +65,7 @@
 
   .container h1 {
     margin: auto;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: black;
     font-weight: 900;
   }

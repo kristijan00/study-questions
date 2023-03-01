@@ -14,6 +14,7 @@
 
 .container h2 {
   padding-top: 2rem;
+  font-size: 1.3rem;
   text-align : center;
   color      : var(--color-new2);
 }
@@ -117,6 +118,7 @@ button {
 
 .question h2 {
   padding-top: 1rem;
+  font-size: 1.3rem;
 }
 
 .question p {
@@ -124,6 +126,7 @@ button {
   float        : left;
   padding-left : 2rem;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
   text-overflow: ellipsis;
 }
 

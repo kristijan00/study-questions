@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300&display=swap');
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -30,7 +29,8 @@ body {
   margin             : 0;
   padding            : 0;
   height             : 100% !important;
-  width              : 100%;
+  width              : 100vw !important;
+  overflow-x: hidden;
   --color-primary    : #f0e3b4;
   --color-secondary  : #212529;
   --color-new        : #313638;
