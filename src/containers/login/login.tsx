@@ -7,12 +7,19 @@ import { runInAction } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import getTopics from '../../api-calls/get-topics';
 import topicStore from '../../stores/topic-store';
+import appUsage from '../../api-calls/app-usage';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
+
+  const addAppUsage = async () => {
+    if (userStore.user) {
+      await appUsage(userStore.user?.id, 'logged_in');
+    }
+  };
 
   const userLogin = async () => {
     if (email.length > 0 && password.length > 0) {
@@ -22,6 +29,7 @@ const Login: React.FC = () => {
         localStorage.setItem('study_app_token', JSON.stringify(user.data));
         runInAction(() => userStore.setUser(user.data));
         navigate('/home');
+        addAppUsage();
       } else {
         setError(true);
         return;

@@ -10,10 +10,17 @@ import userStore from './stores/user-store';
 import topicStore from './stores/topic-store';
 import { useNavigate } from 'react-router-dom';
 import Practice from './containers/practice/practice';
+import appUsage from './api-calls/app-usage';
 
 const App: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  const addAppUsage = async () => {
+    if (userStore.user) {
+      await appUsage(userStore.user?.id, 'logged_in');
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,6 +33,7 @@ const App: React.FC = () => {
       runInAction(() => userStore.setUser(result));
       runInAction(() => topicStore.fetchTopics());
       navigate('/home');
+      addAppUsage();
     } else {
       navigate('/login');
     }
