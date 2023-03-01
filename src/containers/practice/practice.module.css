@@ -177,7 +177,7 @@
 
 @media only screen and (min-width: 1020px) and (max-width: 1840px) {
   .containerAlt {
-    margin: 3rem auto 0;
+    margin: 1.5rem auto 0;
   }
 
   .topBox {
@@ -188,6 +188,7 @@
     padding   : 1rem;
     min-height: 25rem;
     height    : 32rem !important;
+    margin-bottom: 2rem;
   }
 
   .practiceCard .innerCard {

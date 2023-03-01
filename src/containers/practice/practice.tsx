@@ -61,7 +61,7 @@ const Practice: React.FC = () => {
                         <p><b>Question:</b> {topic.questionList[random].title}</p>
                         <p><b>Answer:</b> {topic.questionList[random].answer && reveal ? topic.questionList[random].answer : null}</p>
                         <div className={styles.buttonContainer}>
-                          <button onClick={() => setReveal(curr => !curr)}>Reveal answer</button>
+                          <button onClick={() => setReveal(curr => !curr)}>{reveal ? 'Hide answer' : 'Reveal answer'}</button>
                           <button onClick={() => {
                             generateRandom();
                             setReveal(false);
