@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/study-questions/static/css/main.54ae0820.css",
+    "main.css": "/study-questions/static/css/main.cf1a4562.css",
     "main.js": "/study-questions/static/js/main.c9d857b9.js",
     "static/js/787.f88c8fe6.chunk.js": "/study-questions/static/js/787.f88c8fe6.chunk.js",
     "static/media/user.png": "/study-questions/static/media/user.961568814dceb733c85a.png",
     "static/media/trash-outline.svg": "/study-questions/static/media/trash-outline.90a4794c525ecbd28709dfda3ba37c15.svg",
     "index.html": "/study-questions/index.html",
-    "main.54ae0820.css.map": "/study-questions/static/css/main.54ae0820.css.map",
+    "main.cf1a4562.css.map": "/study-questions/static/css/main.cf1a4562.css.map",
     "main.c9d857b9.js.map": "/study-questions/static/js/main.c9d857b9.js.map",
     "787.f88c8fe6.chunk.js.map": "/study-questions/static/js/787.f88c8fe6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54ae0820.css",
+    "static/css/main.cf1a4562.css",
     "static/js/main.c9d857b9.js"
   ]
 }
