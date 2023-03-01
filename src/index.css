@@ -25,12 +25,12 @@ body {
 
 html,
 body {
-  font-size          : 1rem !important;
+  font-size          : 0.9vw !important;
   margin             : 0;
   padding            : 0;
   height             : 100% !important;
   width              : 100vw !important;
-  overflow-x: hidden;
+  overflow-x         : hidden;
   --color-primary    : #f0e3b4;
   --color-secondary  : #212529;
   --color-new        : #313638;
@@ -75,12 +75,31 @@ li {
   list-style: none;
 }
 
-@media only screen and (max-width: 550px) { 
+@media only screen and (min-width: 1020px) and (max-width: 1840px) {
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  p,
+  span {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   ::-webkit-scrollbar {
     width     : 0px;
     background: transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0ex;
   }

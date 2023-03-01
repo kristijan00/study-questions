@@ -21,7 +21,7 @@ const TopicBox: React.FC<Props> = props => {
         });
       }} />
       <div className={styles.body} onClick={props.onClick} >
-        <h2>{props.title ? props.title : 'No title'}</h2>
+        <h3>{props.title ? props.title : 'No title'}</h3>
       </div>
     </div>
   );
