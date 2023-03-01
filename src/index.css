@@ -10,13 +10,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-  height: 12px;
-  width: 12px;
+  height    : 12px;
+  width     : 12px;
   background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
+  background-color     : #d6dee1;
   -webkit-border-radius: 1ex;
 }
 
@@ -26,21 +26,21 @@ body {
 
 html,
 body {
-  margin           : 0;
-  padding          : 0;
-  height: 100% !important;
-  width            : 100%;
-  --color-primary  : #f0e3b4;
-  --color-secondary: #212529;
-  --color-new: #313638;
-  --color-new2: #313638;
-  /* --color-lower: #D2BBA0; */
-  --color-lower: #F06543;
-  --color-background: #f5f5fb;
+  font-size          : 1rem !important;
+  margin             : 0;
+  padding            : 0;
+  height             : 100% !important;
+  width              : 100%;
+  --color-primary    : #f0e3b4;
+  --color-secondary  : #212529;
+  --color-new        : #313638;
+  --color-new2       : #313638;
+  --color-lower      : #F06543;
+  --color-background : #f5f5fb;
   --not-selected-text: lightslategray;
-  --box-shadow     : 0 0.1rem 0.25rem rgb(0, 0, 0, 0.3);
-  --box-shadow     : 0 0.1rem 0.25rem rgb(0, 0, 0, 0.3);
-  --box-shadow-hard: 0 0.2rem 0.4rem rgb(0, 0, 0, 0.6);
+  --box-shadow       : 0 0.1rem 0.25rem rgb(0, 0, 0, 0.3);
+  --box-shadow       : 0 0.1rem 0.25rem rgb(0, 0, 0, 0.3);
+  --box-shadow-hard  : 0 0.2rem 0.4rem rgb(0, 0, 0, 0.6);
 }
 
 div {
@@ -64,7 +64,7 @@ li {
 
 a {
   text-decoration: none;
-  cursor: pointer;
+  cursor         : pointer;
 }
 
 button {
