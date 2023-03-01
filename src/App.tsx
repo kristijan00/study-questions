@@ -16,9 +16,9 @@ const App: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const addAppUsage = async () => {
+  const addAppUsage = async (action: string) => {
     if (userStore.user) {
-      await appUsage(userStore.user?.id, 'logged_in');
+      await appUsage(userStore.user?.id, action);
     }
   };
 
@@ -27,13 +27,19 @@ const App: React.FC = () => {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (userStore.user) {
+      addAppUsage('closed');
+    }
+  }, [window.onunload]);
+
+  useEffect(() => {
     const user = localStorage.getItem('study_app_token');
     if (user) {
       const result = JSON.parse(user);
       runInAction(() => userStore.setUser(result));
       runInAction(() => topicStore.fetchTopics());
       navigate('/home');
-      addAppUsage();
+      addAppUsage('logged_in');
     } else {
       navigate('/login');
     }
