@@ -1,1 +1,3 @@
-# Study app used to create topics and add questions to them in order to prepare/practice for exams.
+# Study app
+Application used for studying purposes, includes creation of topics, questions, as well as quiz-like testing.
+Hosted at: https://kristijan00.github.io/study-questions/
