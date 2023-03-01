@@ -103,4 +103,8 @@ li {
   ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0ex;
   }
+
+  body, html {
+    font-size: 0.82rem !important;
+  }
 }
