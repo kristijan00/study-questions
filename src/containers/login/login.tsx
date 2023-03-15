@@ -51,13 +51,13 @@ const Login: React.FC = () => {
   };
 
   const userRegistration = async () => {
-    setPassword('');
     if (email.length > 0 && password.length > 6 && firstName.length > 0 && lastName.length > 0) {
       setError(false);
       await registerUser(firstName, lastName, email, password).then(result => result.success ? setScreen('login') : setError(true));
     } else {
       setError(true);
     }
+    setPassword('');
   };
 
   return (
