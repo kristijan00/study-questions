@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './login.module.css';
 import login from '../../api-calls/login';
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +19,13 @@ const Login: React.FC = () => {
   const [lastName, setLastName] = useState<string>('');
   const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setEmail('');
+    setPassword('');
+    setFirstName('');
+    setLastName('');
+  }, [screen]);
 
   const addAppUsage = async () => {
     if (userStore.user) {
@@ -57,7 +64,6 @@ const Login: React.FC = () => {
     } else {
       setError(true);
     }
-    setPassword('');
   };
 
   return (
