@@ -29,6 +29,7 @@
   transition : opacity 1s ease-in-out;
   color: var(--not-selected-text);
   height: 4rem;
+  padding-top: 0.8rem;
 }
 
 .container li button {
