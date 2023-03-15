@@ -14,7 +14,7 @@
 
 .container h2 {
   padding-top: 2rem;
-  font-size: 1.3rem;
+  font-size  : 1.3rem;
   text-align : center;
   color      : var(--color-new2);
 }
@@ -36,7 +36,7 @@
 .createQuestion .expand {
   display       : flex;
   flex-direction: column;
-  padding       : 1rem 7rem;
+  padding       : 1rem 2rem;
   max-height    : 17rem;
   opacity       : 1;
   overflow      : hidden;
@@ -45,14 +45,29 @@
 }
 
 .expand input,
-button {
+.expand button {
   margin-bottom: 1rem;
   border       : 0;
   border-radius: 0.5rem;
-  height       : 2rem;
+  height       : 1.8rem;
+  width        : 15rem;
+  margin       : 0 auto 1rem;
 }
 
-.expand button {
+.createQuestion .expandButton {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border       : 0;
+  border-radius: 0.5rem;
+  height       : 1.8rem;
+}
+
+.expand label {
+  font-size: 0.8rem;
+  margin-left: 2rem;
+}
+
+.createQuestion .expand button {
   background-color: var(--color-new);
   color           : white;
   opacity         : 0.7;
@@ -118,7 +133,7 @@ button {
 
 .question h2 {
   padding-top: 1rem;
-  font-size: 1.3rem;
+  font-size  : 1rem;
 }
 
 .question p {
@@ -126,12 +141,13 @@ button {
   float        : left;
   padding-left : 2rem;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size    : 0.8rem;
   text-overflow: ellipsis;
 }
 
 .question img {
-  width: 1.7rem;
+  width     : 1.3rem;
+  margin-top: 1rem;
 }
 
 .contentContainer {
@@ -155,6 +171,10 @@ button {
   .container .createQuestion {
     margin: 1rem auto 0;
   }
+
+  .question img {
+    margin-top: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -174,7 +194,7 @@ button {
 
   .container h2 {
     padding-top: 2rem;
-    font-size: 1.4rem;
+    font-size  : 1.4rem;
     text-align : center;
     color      : var(--color-new2);
   }
@@ -183,7 +203,7 @@ button {
     position        : absolute;
     left            : 5%;
     z-index         : 9999;
-    width           : 87%;
+    width           : 90%;
     max-height      : 33rem;
     background-color: var(--color-lower);
     border-radius   : 0.5rem;
@@ -204,8 +224,11 @@ button {
     border-radius : inherit;
   }
 
-  .expand input,
-  button {
+  .createQuestion .expand label {
+    margin-left: 1rem;
+  }
+
+  .expand input {
     margin-bottom: 1rem;
     border       : 0;
     border-radius: 0.5rem;
@@ -216,6 +239,7 @@ button {
     background-color: var(--color-new);
     color           : white;
     opacity         : 1;
+    height          : 1.7rem !important;
     transition      : opacity 0.5s;
   }
 
@@ -251,8 +275,8 @@ button {
     overflow-y      : scroll;
     margin          : 15rem auto 0;
     background-color: white;
-    display: flex;
-    flex-direction: column;
+    display         : flex;
+    flex-direction  : column;
   }
 
   .question {
@@ -260,7 +284,7 @@ button {
     width         : 100%;
     padding       : 0 1rem;
     border        : 0.1rem solid var(--color-new);
-    margin: 0 auto 1rem;
+    margin        : 0 auto 1rem;
     border-radius : 0.5rem;
     display       : flex;
     flex-direction: column;
@@ -279,8 +303,8 @@ button {
   }
 
   .question h2 {
-    padding-top: 1rem;
-    font-size: 1.1rem;
+    padding-top  : 1rem;
+    font-size    : 1.1rem;
     margin-bottom: 0.5rem;
   }
 
@@ -289,12 +313,12 @@ button {
     float        : left;
     padding-left : 2rem;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size    : 0.9rem;
     text-overflow: ellipsis;
   }
 
   .question img {
-    width: 1.4rem;
+    width : 1.4rem;
     margin: 0.5rem 0 0;
   }
 

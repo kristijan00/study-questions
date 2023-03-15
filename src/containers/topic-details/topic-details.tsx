@@ -44,7 +44,7 @@ const TopicDetails: React.FC = () => {
             <input type="text" id="answer" value={answer} onChange={e => setAnswer(e.target.value)} />
             <label htmlFor="difficulty">Difficulty:</label>
             <input type="text" id="difficulty" value={difficulty} onChange={e => setDifficulty(e.target.value)} />
-            <button onClick={createNewQuestion}>Create</button>
+            <button className={styles.createQuestionButton} onClick={createNewQuestion}>Create</button>
           </div>
           <button className={styles.expandButton} onClick={() => setCreateExpanded(curr => !curr)}>{createExpanded ? 'Collapse' : 'Add question'}</button>
         </div>

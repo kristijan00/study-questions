@@ -8,10 +8,15 @@ import { observer } from 'mobx-react-lite';
 import getTopics from '../../api-calls/get-topics';
 import topicStore from '../../stores/topic-store';
 import appUsage from '../../api-calls/app-usage';
+import InputGroup from '../../components/input-group/input-group';
+import registerUser from '../../api-calls/register-user';
 
 const Login: React.FC = () => {
+  const [screen, setScreen] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
   const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -45,26 +50,40 @@ const Login: React.FC = () => {
     }
   };
 
+  const userRegistration = async () => {
+    setPassword('');
+    if (email.length > 0 && password.length > 6 && firstName.length > 0 && lastName.length > 0) {
+      setError(false);
+      await registerUser(firstName, lastName, email, password).then(result => result.success ? setScreen('login') : setError(true));
+    } else {
+      setError(true);
+    }
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <h1>Login</h1>
-        <div className={styles.group}>
-          <input onChange={e => setEmail(e.target.value)} value={email} type="text" required />
-          <span className={styles.highlight}></span>
-          <span className={styles.bar}></span>
-          <label>E-mail</label>
-        </div>
-
-        <div className={styles.group}>
-          <input onChange={e => setPassword(e.target.value)} value={password} type="text" required />
-          <span className={styles.highlight}></span>
-          <span className={styles.bar}></span>
-          <label>Password</label>
-        </div>
-        <button onClick={userLogin}><p>Login</p></button>
-        <p className={styles.error}>{error ? 'Login failed. Check credentials.' : null}</p>
-      </div>
+      {
+        screen === 'login' ?
+          <div className={styles.container}>
+            <h1>Login</h1>
+            <InputGroup setState={setEmail} value={email} labelName={'E-mail'} />
+            <InputGroup setState={setPassword} value={password} type="password" labelName={'Password'} />
+            <button onClick={userLogin}><p>Login</p></button>
+            <p className={styles.register}>Don't have an account? <span onClick={() => setScreen('register')}>Register.</span></p>
+            <p className={styles.error}>{error ? 'Login failed. Check credentials.' : null}</p>
+          </div>
+          :
+          <div className={styles.containerRegister}>
+            <h1>Register</h1>
+            <InputGroup setState={setFirstName} value={firstName} labelName={'First Name'} />
+            <InputGroup setState={setLastName} value={lastName} labelName={'Last Name'} />
+            <InputGroup setState={setEmail} value={email} labelName={'Email'} />
+            <InputGroup setState={setPassword} value={password} type="password" labelName={'Password'} />
+            <button onClick={userRegistration}><p>Register</p></button>
+            <p className={styles.register}>Already have an account? <span onClick={() => setScreen('login')}>Login.</span></p>
+            <p className={styles.error}>{error ? 'Registration failed. Check fields.' : null}</p>
+          </div>
+      }
     </div>
   );
 };

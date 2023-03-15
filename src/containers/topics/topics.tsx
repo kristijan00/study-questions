@@ -32,10 +32,10 @@ const Topics: React.FC = () => {
         </div>
         <div className={styles.topicList}>
           {
-            topicStore.topics ?
+            topicStore.topics.length > 0 ?
               topicStore.topics.map(topic => <TopicBox key={topic.id} title={topic.name} topic_id={topic.id} onClick={() => navigate(`/topic-details/${topic.id}`)} />)
               :
-              <h1>No topics to display.</h1>
+              <h1 className={styles.noTopics}>No topics to display.</h1>
           }
         </div>
       </div>

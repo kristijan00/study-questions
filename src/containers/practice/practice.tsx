@@ -59,6 +59,7 @@ const Practice: React.FC = () => {
                       <h1>Topic: {topic.name ? topic.name : 'No title'}</h1>
                       <div className={styles.innerCard}>
                         <p><b>Question:</b> {topic.questionList[random].title}</p>
+                        <p><b>Difficulty:</b> {topic.questionList[random].difficulty ? topic.questionList[random].difficulty : 'not specified'}</p>
                         <p><b>Answer:</b> {topic.questionList[random].answer && reveal ? topic.questionList[random].answer : null}</p>
                         <div className={styles.buttonContainer}>
                           <button onClick={() => setReveal(curr => !curr)}>{reveal ? 'Hide answer' : 'Reveal answer'}</button>

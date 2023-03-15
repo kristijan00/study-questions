@@ -9,7 +9,7 @@
 }
 
 .container img {
-  width: 1rem;
+  width: 0.9rem;
   margin-left: 8rem;
   opacity: 0.6;
   transition: opacity 0.5s;
@@ -20,9 +20,10 @@
   opacity: 1;
 }
 
-.container h2 {
+.container h3 {
   margin-top: 0.2rem;
   text-align: center;
+  font-size: 0.85rem;
 }
 
 .container .body {
@@ -53,9 +54,9 @@
     opacity: 1;
   }
   
-  .container h2 {
+  .container h3 {
     margin-top: 0.2rem;
-    font-size: medium;
+    font-size: 1rem;
     text-align: center;
   }
   

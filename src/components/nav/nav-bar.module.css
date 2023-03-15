@@ -11,7 +11,7 @@
 .container h1 {
   margin: 4rem auto 8rem;
   color: black;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 1.8rem !important;
 }
 
@@ -33,7 +33,7 @@
 
 .container li button {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   border     : none;
   background : none;
 }
@@ -51,6 +51,16 @@
 .active {
   opacity: 1 !important;
 }
+
+@media only screen and (min-width: 1020px) and (max-width: 1840px) {
+  .container li button {
+    font-weight: 600;
+    font-size: 1rem;
+    border     : none;
+    background : none;
+  }
+}
+
 
 @media only screen and (max-width: 550px) {
   .container {
