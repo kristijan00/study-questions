@@ -1,0 +1,29 @@
+.spinner {
+  position     : absolute;
+  top          : 50%;
+  left         : 46%;
+  border       : 8px solid #f3f3f3;
+  border-top   : 8px solid var(--color-lower);
+  border-radius: 50%;
+  width        : 3rem;
+  height       : 3rem;
+  animation    : spin 1s linear infinite;
+  z-index      : 9999;
+}
+
+@media only screen and (max-width: 550px) {
+  .spinner {
+    top    : 48%;
+    z-index: 9999;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
