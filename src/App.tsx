@@ -11,26 +11,35 @@ import topicStore from './stores/topic-store';
 import { useNavigate } from 'react-router-dom';
 import Practice from './containers/practice/practice';
 import appUsage from './api-calls/app-usage';
+import ReactGA from 'react-ga4';
 
 const App: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
+  
   const addAppUsage = async (action: string) => {
     if (userStore.user) {
       await appUsage(userStore.user?.id, action);
     }
   };
+  
+  useEffect(() => {
+    ReactGA.initialize('G-F6428BEFLK');
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.send({
+      hitType: 'pageView',
+      page: location.pathname.substring(20),
+    });
   }, [location.pathname]);
 
   useEffect(() => {
     if (userStore.user) {
-      addAppUsage('closed');
+      addAppUsage('Closed');
     }
-  }, [window.onunload]);
+  }, [window.onbeforeunload]);
 
   useEffect(() => {
     const user = localStorage.getItem('study_app_token');
