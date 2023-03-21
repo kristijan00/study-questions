@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/study-questions/static/css/main.238eaaa9.css",
-    "main.js": "/study-questions/static/js/main.ef768783.js",
+    "main.css": "/study-questions/static/css/main.0fc9eee2.css",
+    "main.js": "/study-questions/static/js/main.13048b77.js",
     "static/js/787.f88c8fe6.chunk.js": "/study-questions/static/js/787.f88c8fe6.chunk.js",
     "static/media/user.png": "/study-questions/static/media/user.961568814dceb733c85a.png",
     "index.html": "/study-questions/index.html",
     "static/media/trash-outline.svg": "/study-questions/static/media/trash-outline.90a4794c525ecbd28709dfda3ba37c15.svg",
-    "main.238eaaa9.css.map": "/study-questions/static/css/main.238eaaa9.css.map",
-    "main.ef768783.js.map": "/study-questions/static/js/main.ef768783.js.map",
+    "static/media/create-outline.svg": "/study-questions/static/media/create-outline.4687f6fb689356dc752e1689d7dfe04c.svg",
+    "static/media/close-outline.svg": "/study-questions/static/media/close-outline.64f09d760e8936f5907a62abff40b422.svg",
+    "main.0fc9eee2.css.map": "/study-questions/static/css/main.0fc9eee2.css.map",
+    "main.13048b77.js.map": "/study-questions/static/js/main.13048b77.js.map",
     "787.f88c8fe6.chunk.js.map": "/study-questions/static/js/787.f88c8fe6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.238eaaa9.css",
-    "static/js/main.ef768783.js"
+    "static/css/main.0fc9eee2.css",
+    "static/js/main.13048b77.js"
   ]
 }
