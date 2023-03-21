@@ -10,9 +10,11 @@ import topicStore from '../../stores/topic-store';
 import appUsage from '../../api-calls/app-usage';
 import InputGroup from '../../components/input-group/input-group';
 import registerUser from '../../api-calls/register-user';
+import Spinner from '../../components/spinner/spinner';
 
 const Login: React.FC = () => {
   const [screen, setScreen] = useState<'login' | 'register'>('login');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [firstName, setFirstName] = useState<string>('');
@@ -36,10 +38,12 @@ const Login: React.FC = () => {
   const userLogin = async () => {
     if (email.length > 0 && password.length > 0) {
       setError(false);
+      setIsLoading(true);
       const user = await login(email, password);
       if (user.success) {
         localStorage.setItem('study_app_token', JSON.stringify(user.data));
         runInAction(() => userStore.setUser(user.data));
+        setIsLoading(false);
         navigate('/home');
         addAppUsage();
       } else {
@@ -60,14 +64,21 @@ const Login: React.FC = () => {
   const userRegistration = async () => {
     if (email.length > 0 && password.length > 6 && firstName.length > 0 && lastName.length > 0) {
       setError(false);
+      setIsLoading(true);
       await registerUser(firstName, lastName, email, password).then(result => result.success ? setScreen('login') : setError(true));
+      setIsLoading(false);
     } else {
       setError(true);
     }
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${isLoading ? styles.darken : ''}`}>
+      {
+        isLoading ?
+          <Spinner />
+          : null
+      }
       {
         screen === 'login' ?
           <div className={styles.container}>
