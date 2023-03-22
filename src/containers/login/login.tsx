@@ -48,6 +48,7 @@ const Login: React.FC = () => {
         addAppUsage();
       } else {
         setError(true);
+        setIsLoading(false);
         return;
       }
       if (userStore.user) {
@@ -58,6 +59,7 @@ const Login: React.FC = () => {
       }
     } else {
       setError(true);
+      setIsLoading(false);
     }
   };
 
@@ -69,6 +71,7 @@ const Login: React.FC = () => {
       setIsLoading(false);
     } else {
       setError(true);
+      setIsLoading(false);
     }
   };
 
