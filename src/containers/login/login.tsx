@@ -27,6 +27,7 @@ const Login: React.FC = () => {
     setPassword('');
     setFirstName('');
     setLastName('');
+    setError(false);
   }, [screen]);
 
   const addAppUsage = async () => {
